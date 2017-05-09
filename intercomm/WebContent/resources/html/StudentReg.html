@@ -1,0 +1,88 @@
+
+<form  id="studentreg" class="container" ng-controller="studentLoginCtrl as addCtrl">
+  <h2 align="center">STUDENT REGISTRATION FORM</h2>
+ 
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="name">Name:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" ng-model="addCtrl.student.name" name="name" id="name" placeholder="Enter name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Password:</label>
+      <div class="col-sm-10">          
+        <input type="password" class="form-control" ng-model="addCtrl.student.pwd" name="pwd" id="pwd" placeholder="Enter password">
+      </div>
+    </div>
+	<div class="form-group">
+      <label class="control-label col-sm-2" for="cpwd">Confirm Password:</label>
+      <div class="col-sm-10">          
+        <input type="password" class="form-control" addCtrl="student.cpwd" name="cpwd" id="cpwd" placeholder="Confirm password">
+      </div>
+    </div>
+	
+	 <div class="form-group">
+	 <label class="control-label col-sm-2" for="pwd">DOB</label>
+	 <div class="col-sm-10">
+        <div class="input-group date" data-provide="datepicker">
+			<input type="text" ng-model="student.dob" name="dob" class="form-control" placeholder="DOB">
+			<div class="input-group-addon">
+				<span class="glyphicon glyphicon-th"></span>
+			</div>
+        </div>
+            </div>
+     </div>
+	  <div class="form-group">
+	 <label class="control-label col-sm-2" for="pwd">Gender</label>
+	 <div class="col-sm-10">
+			<div class="radio">
+			  <label><input type="radio" ng-model="student.gender" value="male" name="gender">Male</label>
+			</div>
+			<div class="radio">
+			  <label><input type="radio" value="female" ng-model="student.gender" name="gender">Female</label>
+			</div>
+			</div>
+     </div>
+	 
+	 <div class="form-group">
+      <label class="control-label col-sm-2" for="fname">Father name:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" ng-model="addCtrl.student.fatherName" name="fatherName" id="fatherName" placeholder="Enter father name">
+      </div>
+     </div>
+	 
+	 <div class="form-group">
+      <label class="control-label col-sm-2" for="foccupation">Father occupation:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="fatherOccupation" ng-model="student.fatherOccupation" id="fatherOccupation" placeholder="Enter father occupation">
+      </div>
+     </div>
+	 
+	  <div class="form-group">
+      <label class="control-label col-sm-2" for="fcontact">Father Contact:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="fatherContact" ng-model="student.fatherContact" id="fatherContact" placeholder="Enter father contact">
+      </div>
+     </div>
+	 
+	 <div class="form-group">
+      <label class="control-label col-sm-2" for="religion">Religion:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" ng-model="student.religion" name="religion" id="religion" placeholder="Enter religion">
+      </div>
+     </div>
+	 
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+          <label><input type="checkbox"> Remember me</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="button" ng-click="createStudent()" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+
+</form>
