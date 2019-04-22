@@ -24,6 +24,7 @@ public class AddController {
 	@RequestMapping(value ="/api/addStudent")
 	@ResponseBody
 	public String addStudent(@RequestBody String studentInfo){
+		// added this text for check in test !!!
 		logger.debug("AddController debug :::: addStudent()");
 		logger.info( "AddController info:::: addStudent()");
 		System.out.println("Student JSON is  :::: "+studentInfo );
